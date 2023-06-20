@@ -1,0 +1,10 @@
+name: LightLevelDisplay
+version: '${project.version}'
+main: com.ashkiano.lightleveldisplay.LightLevelDisplay
+api-version: '1.20'
+authors: [AshKiano]
+description: On /lightlevel command toggles the display of the light level on the block the player is standing on.
+website: https://www.ashkiano.com
+commands:
+  lightlevel:
+    description: Toggles the display of the light level on the block the player is standing on.

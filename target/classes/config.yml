@@ -1,0 +1,29 @@
+# This message will be displayed when someone who is not a player tries to use the command.
+not-a-player-message: "&cThis command can only be used by players."
+
+# This message will be displayed when a player without the necessary permissions tries to use the command.
+no-permission-message: "&cYou don't have permission to use this command."
+
+# This message will be displayed when a player successfully enables the light level display.
+light-level-enabled: "&aLight level display has been enabled."
+
+# This message will be displayed when a player successfully disables the light level display.
+light-level-disabled: "&cLight level display has been disabled."
+
+# This message will be displayed when a player moves to a block where monsters can spawn.
+# The '%s' will be replaced with the actual light level.
+monster-can-spawn-message: "&cMonsters can spawn at this light level of %s."
+
+# This message will be displayed when a player moves to a block where monsters cannot spawn.
+# The '%s' will be replaced with the actual light level.
+monster-cannot-spawn-message: "&aMonsters cannot spawn at this light level of %s."
+
+# If this is set to true, the light level messages will be displayed in the action bar.
+# If this is set to false, the light level messages will be displayed in the chat.
+display-in-actionbar: true
+
+# If this is set to true, the plugin will check if the player has the permission specified in 'permission-node'.
+check-permission: true
+
+# This is the permission node that players must have in order to use the /lightlevel command if 'check-permission' is true.
+permission-node: "lightdisplay"
