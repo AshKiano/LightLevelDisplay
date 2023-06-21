@@ -1,22 +1,28 @@
 # This message will be displayed when someone who is not a player tries to use the command.
-not-a-player-message: "&cThis command can only be used by players."
+# Supports both '&' Bukkit color codes and '&#rrggbb' hex color codes.
+not-a-player-message: "&#c03923This command can only be used by players."
 
 # This message will be displayed when a player without the necessary permissions tries to use the command.
+# Supports both '&' Bukkit color codes and '&#rrggbb' hex color codes.
 no-permission-message: "&cYou don't have permission to use this command."
 
 # This message will be displayed when a player successfully enables the light level display.
-light-level-enabled: "&aLight level display has been enabled."
+# Supports both '&' Bukkit color codes and '&#rrggbb' hex color codes.
+light-level-enabled: "&#26ff00Light level display has been enabled."
 
 # This message will be displayed when a player successfully disables the light level display.
+# Supports both '&' Bukkit color codes and '&#rrggbb' hex color codes.
 light-level-disabled: "&cLight level display has been disabled."
 
 # This message will be displayed when a player moves to a block where monsters can spawn.
 # The '%s' will be replaced with the actual light level.
-monster-can-spawn-message: "&cMonsters can spawn at this light level of %s."
+# Supports both '&' Bukkit color codes and '&#rrggbb' hex color codes.
+monster-can-spawn-message: "&#c03923Monsters can spawn at this light level of %s."
 
 # This message will be displayed when a player moves to a block where monsters cannot spawn.
 # The '%s' will be replaced with the actual light level.
-monster-cannot-spawn-message: "&aMonsters cannot spawn at this light level of %s."
+# Supports both '&' Bukkit color codes and '&#rrggbb' hex color codes.
+monster-cannot-spawn-message: "&#26ff00Monsters cannot spawn at this light level of %s."
 
 # If this is set to true, the light level messages will be displayed in the action bar.
 # If this is set to false, the light level messages will be displayed in the chat.
