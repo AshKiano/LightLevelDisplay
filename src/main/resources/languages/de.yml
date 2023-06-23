@@ -1,0 +1,25 @@
+# Diese Nachricht wird angezeigt, wenn jemand, der kein Spieler ist, versucht, den Befehl zu verwenden.
+# Unterstützt sowohl '&' Bukkit-Farbcodes als auch '&#rrggbb' Hex-Farbcodes.
+not-a-player-message: "&#c03923Dieser Befehl kann nur von Spielern verwendet werden."
+
+# Diese Nachricht wird angezeigt, wenn ein Spieler ohne die erforderlichen Berechtigungen versucht, den Befehl zu verwenden.
+# Unterstützt sowohl '&' Bukkit-Farbcodes als auch '&#rrggbb' Hex-Farbcodes.
+no-permission-message: "&cDu hast keine Berechtigung, diesen Befehl zu verwenden."
+
+# Diese Nachricht wird angezeigt, wenn ein Spieler erfolgreich die Lichtstufenanzeige aktiviert.
+# Unterstützt sowohl '&' Bukkit-Farbcodes als auch '&#rrggbb' Hex-Farbcodes.
+light-level-enabled: "&#26ff00Die Lichtstufenanzeige wurde aktiviert."
+
+# Diese Nachricht wird angezeigt, wenn ein Spieler erfolgreich die Lichtstufenanzeige deaktiviert.
+# Unterstützt sowohl '&' Bukkit-Farbcodes als auch '&#rrggbb' Hex-Farbcodes.
+light-level-disabled: "&cDie Lichtstufenanzeige wurde deaktiviert."
+
+# Diese Nachricht wird angezeigt, wenn ein Spieler zu einem Block geht, auf dem Monster spawnen können.
+# '%s' wird durch die tatsächliche Lichtstufe ersetzt.
+# Unterstützt sowohl '&' Bukkit-Farbcodes als auch '&#rrggbb' Hex-Farbcodes.
+monster-can-spawn-message: "&#c03923Monster können auf dieser Lichtstufe von %s spawnen."
+
+# Diese Nachricht wird angezeigt, wenn ein Spieler zu einem Block geht, auf dem Monster nicht spawnen können.
+# '%s' wird durch die tatsächliche Lichtstufe ersetzt.
+# Unterstützt sowohl '&' Bukkit-Farbcodes als auch '&#rrggbb' Hex-Farbcodes.
+monster-cannot-spawn-message: "&#26ff00Monster können auf dieser Lichtstufe von %s nicht spawnen."

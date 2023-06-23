@@ -24,7 +24,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+//TODO upravit tak, aby si každý hráč mohl vybrat jestli chce to do chatu nebo bossbaru
 public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Listener {
 
     // Store a map of player UUIDs to boolean values, indicating whether light level display is enabled for each player
@@ -48,7 +48,7 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         }
 
         // Check if language files exist, if not, save them from the resources
-        String[] languages = {"en", "cs"};
+        String[] languages = {"en", "cs", "de", "es"};
         for (String lang : languages) {
             File langFile = new File(languageFolder, lang + ".yml");
             if (!langFile.exists()) {

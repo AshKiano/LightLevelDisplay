@@ -1,0 +1,25 @@
+# Este mensaje se mostrará cuando alguien que no es un jugador intente usar el comando.
+# Soporta tanto '&' códigos de color Bukkit como '&#rrggbb' códigos de color hexadecimales.
+not-a-player-message: "&#c03923Este comando solo puede ser usado por jugadores."
+
+# Este mensaje se mostrará cuando un jugador sin los permisos necesarios intente usar el comando.
+# Soporta tanto '&' códigos de color Bukkit como '&#rrggbb' códigos de color hexadecimales.
+no-permission-message: "&cNo tienes permiso para usar este comando."
+
+# Este mensaje se mostrará cuando un jugador habilite con éxito la visualización del nivel de luz.
+# Soporta tanto '&' códigos de color Bukkit como '&#rrggbb' códigos de color hexadecimales.
+light-level-enabled: "&#26ff00La visualización del nivel de luz ha sido habilitada."
+
+# Este mensaje se mostrará cuando un jugador deshabilite con éxito la visualización del nivel de luz.
+# Soporta tanto '&' códigos de color Bukkit como '&#rrggbb' códigos de color hexadecimales.
+light-level-disabled: "&cLa visualización del nivel de luz ha sido deshabilitada."
+
+# Este mensaje se mostrará cuando un jugador se mueva a un bloque donde los monstruos pueden aparecer.
+# El '%s' será reemplazado con el nivel de luz actual.
+# Soporta tanto '&' códigos de color Bukkit como '&#rrggbb' códigos de color hexadecimales.
+monster-can-spawn-message: "&#c03923Los monstruos pueden aparecer en este nivel de luz de %s."
+
+# Este mensaje se mostrará cuando un jugador se mueva a un bloque donde los monstruos no pueden aparecer.
+# El '%s' será reemplazado con el nivel de luz actual.
+# Soporta tanto '&' códigos de color Bukkit como '&#rrggbb' códigos de color hexadecimales.
+monster-cannot-spawn-message: "&#26ff00Los monstruos no pueden aparecer en este nivel de luz de %s."
