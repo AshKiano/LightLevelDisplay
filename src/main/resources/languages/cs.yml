@@ -1,0 +1,24 @@
+# Tento soubor obsahuje lokalizované zprávy pro Light Level Display plugin.
+# Znaky "&" se používají k označení barevných kódů, zatímco "&#XXXXXX" se používají k označení hexadecimálních barevných kódů.
+# Následující hodnoty jsou výchozí hodnoty, které jsou použity, pokud nejsou v konfiguračním souboru uvedeny žádné hodnoty.
+# V případě, že chcete změnit text zpráv, jednoduše upravte odpovídající hodnoty v tomto souboru.
+
+# Zpráva zaslaná uživateli, který není hráč, pokud se pokusí použít příkaz.
+not-a-player-message: '&cTento příkaz může použít pouze hráč.'
+
+# Zpráva zaslaná hráči, který nemá potřebné oprávnění k použití příkazu.
+no-permission-message: '&cNemáte povolení k použití tohoto příkazu.'
+
+# Zpráva zaslaná hráči, pokud aktivuje zobrazení úrovně světla.
+light-level-enabled: '&aZobrazení úrovně světla bylo aktivováno.'
+
+# Zpráva zaslaná hráči, pokud deaktivuje zobrazení úrovně světla.
+light-level-disabled: '&cZobrazení úrovně světla bylo deaktivováno.'
+
+# Zpráva zaslaná hráči, pokud je úroveň světla tak nízká, že mohou spawnovat monstra.
+# Procentuální symbol "%" je nahrazen skutečnou úrovní světla.
+monster-can-spawn-message: '&cPři této úrovni světla %s se mohou spawnovat monstra.'
+
+# Zpráva zaslaná hráči, pokud je úroveň světla dostatečně vysoká, že monstra nemohou spawnovat.
+# Procentuální symbol "%" je nahrazen skutečnou úrovní světla.
+monster-cannot-spawn-message: '&aPři této úrovni světla %s se nemohou spawnovat monstra.'

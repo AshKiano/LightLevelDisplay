@@ -12,10 +12,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +29,9 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
 
     // Store a map of player UUIDs to boolean values, indicating whether light level display is enabled for each player
     private final Map<UUID, Boolean> lightLevelDisplayMap = new HashMap<>();
+    // Declare FileConfiguration and File objects to store the language configuration file
+    private FileConfiguration languageConfig = null;
+    private File languageConfigFile = null;
 
     @Override
     public void onEnable() {
@@ -32,6 +41,24 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         // Save the default configuration file if it does not already exist
         this.saveDefaultConfig();
 
+        // Create a directory named "languages" in the plugin's data folder
+        File languageFolder = new File(getDataFolder(), "languages");
+        if (!languageFolder.exists()) {
+            languageFolder.mkdirs();
+        }
+
+        // Check if language files exist, if not, save them from the resources
+        String[] languages = {"en", "cs"};
+        for (String lang : languages) {
+            File langFile = new File(languageFolder, lang + ".yml");
+            if (!langFile.exists()) {
+                this.saveResource("languages/" + lang + ".yml", false);
+            }
+        }
+
+        // Reload the language config file
+        reloadLanguageConfig();
+
         Metrics metrics = new Metrics(this, 18811);
     }
 
@@ -39,7 +66,7 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         // Check if the sender is a player. If not, send a message and return false
         if (!(sender instanceof Player)) {
-            sender.sendMessage(translateColorCodes(getConfig().getString("not-a-player-message", "&cThis command can only be used by players.")));
+            sender.sendMessage(translateColorCodes(languageConfig.getString("not-a-player-message", "&cThis command can only be used by players.")));
             return false;
         }
 
@@ -50,7 +77,7 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         boolean checkPermission = getConfig().getBoolean("check-permission", true);
         if (checkPermission && !player.hasPermission(getConfig().getString("permission-node", "lightdisplay"))) {
             // If not, send a message and return false
-            player.sendMessage(translateColorCodes(getConfig().getString("no-permission-message", "&cYou don't have permission to use this command.")));
+            player.sendMessage(translateColorCodes(languageConfig.getString("no-permission-message", "&cYou don't have permission to use this command.")));
             return false;
         }
 
@@ -65,8 +92,8 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
 
         // Prepare a message to inform the player whether light level display has been enabled or disabled
         String message = !displayLightLevel ?
-                getConfig().getString("light-level-enabled", "&aLight level display has been enabled.") :
-                getConfig().getString("light-level-disabled", "&cLight level display has been disabled.");
+                languageConfig.getString("light-level-enabled", "&aLight level display has been enabled.") :
+                languageConfig.getString("light-level-disabled", "&cLight level display has been disabled.");
 
         // Send the message to the player
         player.sendMessage(translateColorCodes(message));
@@ -101,9 +128,9 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         // Prepare the message to send to the player, based on the light level
         String monsterSpawnMessage;
         if (lightLevel <= 7) { // Monsters can spawn at light level 7 or lower
-            monsterSpawnMessage = getConfig().getString("monster-can-spawn-message", "&cMonsters can spawn at this light level of %s.");
+            monsterSpawnMessage = languageConfig.getString("monster-can-spawn-message", "&cMonsters can spawn at this light level of %s.");
         } else {
-            monsterSpawnMessage = getConfig().getString("monster-cannot-spawn-message", "&aMonsters cannot spawn at this light level of %s.");
+            monsterSpawnMessage = languageConfig.getString("monster-cannot-spawn-message", "&aMonsters cannot spawn at this light level of %s.");
         }
 
         // Replace the placeholder with the actual light level
@@ -153,5 +180,22 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
 
         // Append the remainder of the translated message to the buffer and convert the buffer to a string
         return matcher.appendTail(buffer).toString();
+    }
+
+    public void reloadLanguageConfig() {
+        // Reload the language config file when called
+        String languageCode = getConfig().getString("language-code", "en");
+        if (languageConfigFile == null) {
+            languageConfigFile = new File(getDataFolder() + "/languages", languageCode + ".yml");
+        }
+        languageConfig = YamlConfiguration.loadConfiguration(languageConfigFile);
+
+        // Look for defaults in the jar
+        InputStream defConfigStream = this.getResource("languages/" + languageCode + ".yml");
+        if (defConfigStream != null) {
+            Reader reader = new InputStreamReader(defConfigStream);
+            YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(reader);
+            languageConfig.setDefaults(defConfig);
+        }
     }
 }
