@@ -1,0 +1,25 @@
+# Ce message sera affiché lorsqu'une personne qui n'est pas un joueur tente d'utiliser la commande.
+# Prend en charge les codes de couleur Bukkit '&' et '&#rrggbb'.
+not-a-player-message: "&#c03923Cette commande ne peut être utilisée que par les joueurs."
+
+# Ce message sera affiché lorsqu'un joueur sans les permissions nécessaires tente d'utiliser la commande.
+# Prend en charge les codes de couleur Bukkit '&' et '&#rrggbb'.
+no-permission-message: "&cVous n'avez pas la permission d'utiliser cette commande."
+
+# Ce message sera affiché lorsqu'un joueur active avec succès l'affichage du niveau de lumière.
+# Prend en charge les codes de couleur Bukkit '&' et '&#rrggbb'.
+light-level-enabled: "&#26ff00L'affichage du niveau de lumière a été activé."
+
+# Ce message sera affiché lorsqu'un joueur désactive avec succès l'affichage du niveau de lumière.
+# Prend en charge les codes de couleur Bukkit '&' et '&#rrggbb'.
+light-level-disabled: "&cL'affichage du niveau de lumière a été désactivé."
+
+# Ce message sera affiché lorsqu'un joueur se déplace vers un bloc où les monstres peuvent apparaître.
+# Le '%s' sera remplacé par le niveau de lumière réel.
+# Prend en charge les codes de couleur Bukkit '&' et '&#rrggbb'.
+monster-can-spawn-message: "&#c03923Les monstres peuvent apparaître à ce niveau de lumière de %s."
+
+# Ce message sera affiché lorsqu'un joueur se déplace vers un bloc où les monstres ne peuvent pas apparaître.
+# Le '%s' sera remplacé par le niveau de lumière réel.
+# Prend en charge les codes de couleur Bukkit '&' et '&#rrggbb'.
+monster-cannot-spawn-message: "&#26ff00Les monstres ne peuvent pas apparaître à ce niveau de lumière de %s."
