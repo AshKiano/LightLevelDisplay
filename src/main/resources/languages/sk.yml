@@ -1,0 +1,25 @@
+# Táto správa sa zobrazí, keď sa niekto, kto nie je hráč, pokúsi použiť príkaz.
+# Podporuje oboje - '&' Bukkit farebné kódy a '&#rrggbb' hex farebné kódy.
+not-a-player-message: "&#c03923Tento príkaz môžu používať iba hráči."
+
+# Táto správa sa zobrazí, keď sa hráč bez potrebných povolení pokúsi použiť príkaz.
+# Podporuje oboje - '&' Bukkit farebné kódy a '&#rrggbb' hex farebné kódy.
+no-permission-message: "&cNemáš povolenie na použitie tohto príkazu."
+
+# Táto správa sa zobrazí, keď hráč úspešne aktivuje zobrazenie úrovne svetla.
+# Podporuje oboje - '&' Bukkit farebné kódy a '&#rrggbb' hex farebné kódy.
+light-level-enabled: "&#26ff00Zobrazenie úrovne svetla bolo aktivované."
+
+# Táto správa sa zobrazí, keď hráč úspešne deaktivuje zobrazenie úrovne svetla.
+# Podporuje oboje - '&' Bukkit farebné kódy a '&#rrggbb' hex farebné kódy.
+light-level-disabled: "&cZobrazenie úrovne svetla bolo deaktivované."
+
+# Táto správa sa zobrazí, keď hráč prejde na blok, kde môžu monštrá spawnovať.
+# '%s' bude nahradené skutočnou úrovňou svetla.
+# Podporuje oboje - '&' Bukkit farebné kódy a '&#rrggbb' hex farebné kódy.
+monster-can-spawn-message: "&#c03923Monštrá môžu spawnovať pri tejto úrovni svetla %s."
+
+# Táto správa sa zobrazí, keď hráč prejde na blok, kde monštrá nemôžu spawnovať.
+# '%s' bude nahradené skutočnou úrovňou svetla.
+# Podporuje oboje - '&' Bukkit farebné kódy a '&#rrggbb' hex farebné kódy.
+monster-cannot-spawn-message: "&#26ff00Monštrá nemôžu spawnovať pri tejto úrovni svetla %s."
