@@ -1,0 +1,25 @@
+# Ta wiadomość zostanie wyświetlona, gdy ktoś, kto nie jest graczem, spróbuje użyć polecenia.
+# Obsługuje zarówno kody kolorów Bukkit '&' jak i kody kolorów hex '&#rrggbb'.
+not-a-player-message: "&#c03923To polecenie może być używane tylko przez graczy."
+
+# Ta wiadomość zostanie wyświetlona, gdy gracz bez odpowiednich uprawnień spróbuje użyć polecenia.
+# Obsługuje zarówno kody kolorów Bukkit '&' jak i kody kolorów hex '&#rrggbb'.
+no-permission-message: "&cNie masz uprawnień do użycia tego polecenia."
+
+# Ta wiadomość zostanie wyświetlona, gdy gracz z powodzeniem włączy wyświetlanie poziomu światła.
+# Obsługuje zarówno kody kolorów Bukkit '&' jak i kody kolorów hex '&#rrggbb'.
+light-level-enabled: "&#26ff00Wyświetlanie poziomu światła zostało włączone."
+
+# Ta wiadomość zostanie wyświetlona, gdy gracz z powodzeniem wyłączy wyświetlanie poziomu światła.
+# Obsługuje zarówno kody kolorów Bukkit '&' jak i kody kolorów hex '&#rrggbb'.
+light-level-disabled: "&cWyświetlanie poziomu światła zostało wyłączone."
+
+# Ta wiadomość zostanie wyświetlona, gdy gracz przeniesie się do bloku, w którym mogą pojawić się potwory.
+# '%s' zostanie zastąpione rzeczywistym poziomem światła.
+# Obsługuje zarówno kody kolorów Bukkit '&' jak i kody kolorów hex '&#rrggbb'.
+monster-can-spawn-message: "&#c03923Potwory mogą pojawić się na tym poziomie światła %s."
+
+# Ta wiadomość zostanie wyświetlona, gdy gracz przeniesie się do bloku, w którym potwory nie mogą się pojawić.
+# '%s' zostanie zastąpione rzeczywistym poziomem światła.
+# Obsługuje zarówno kody kolorów Bukkit '&' jak i kody kolorów hex '&#rrggbb'.
+monster-cannot-spawn-message: "&#26ff00Potwory nie mogą pojawić się na tym poziomie światła %s."
