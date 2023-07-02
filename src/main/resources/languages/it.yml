@@ -1,0 +1,25 @@
+# Questo messaggio verrà visualizzato quando qualcuno che non è un giocatore cerca di utilizzare il comando.
+# Supporta sia i codici colore di Bukkit '&' che i codici colore esadecimali '&#rrggbb'.
+not-a-player-message: "&#c03923Questo comando può essere utilizzato solo dai giocatori."
+
+# Questo messaggio verrà visualizzato quando un giocatore senza le necessarie autorizzazioni cerca di utilizzare il comando.
+# Supporta sia i codici colore di Bukkit '&' che i codici colore esadecimali '&#rrggbb'.
+no-permission-message: "&cNon hai il permesso di utilizzare questo comando."
+
+# Questo messaggio verrà visualizzato quando un giocatore abilita con successo la visualizzazione del livello di luce.
+# Supporta sia i codici colore di Bukkit '&' che i codici colore esadecimali '&#rrggbb'.
+light-level-enabled: "&#26ff00La visualizzazione del livello di luce è stata abilitata."
+
+# Questo messaggio verrà visualizzato quando un giocatore disabilita con successo la visualizzazione del livello di luce.
+# Supporta sia i codici colore di Bukkit '&' che i codici colore esadecimali '&#rrggbb'.
+light-level-disabled: "&cLa visualizzazione del livello di luce è stata disabilitata."
+
+# Questo messaggio verrà visualizzato quando un giocatore si sposta su un blocco dove possono generarsi mostri.
+# Il '%s' verrà sostituito con il livello di luce effettivo.
+# Supporta sia i codici colore di Bukkit '&' che i codici colore esadecimali '&#rrggbb'.
+monster-can-spawn-message: "&#c03923I mostri possono generarsi a questo livello di luce di %s."
+
+# Questo messaggio verrà visualizzato quando un giocatore si sposta su un blocco dove i mostri non possono generarsi.
+# Il '%s' verrà sostituito con il livello di luce effettivo.
+# Supporta sia i codici colore di Bukkit '&' che i codici colore esadecimali '&#rrggbb'.
+monster-cannot-spawn-message: "&#26ff00I mostri non possono generarsi a questo livello di luce di %s."
