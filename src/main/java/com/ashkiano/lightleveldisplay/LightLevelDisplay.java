@@ -48,7 +48,7 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         }
 
         // Check if language files exist, if not, save them from the resources
-        String[] languages = {"en", "cs", "de", "es", "fr", "sk", "pl", "ru", "it", "el"};
+        String[] languages = {"en", "cs", "de", "es", "fr", "sk", "pl", "ru", "it", "el", "uk"};
         for (String lang : languages) {
             File langFile = new File(languageFolder, lang + ".yml");
             if (!langFile.exists()) {
