@@ -1,0 +1,25 @@
+# See sõnum kuvatakse, kui keegi, kes pole mängija, üritab käsku kasutada.
+# Toetab nii '&' Bukkiti värvikoode kui ka '&#rrggbb' kuusnurkseid värvikoode.
+not-a-player-message: "&#c03923Seda käsku saavad kasutada ainult mängijad."
+
+# See sõnum kuvatakse, kui mängija, kellel pole vajalikke õigusi, üritab käsku kasutada.
+# Toetab nii '&' Bukkiti värvikoode kui ka '&#rrggbb' kuusnurkseid värvikoode.
+no-permission-message: "&cSul pole luba seda käsku kasutada."
+
+# See sõnum kuvatakse, kui mängija aktiveerib edukalt valgustaseme kuvamise.
+# Toetab nii '&' Bukkiti värvikoode kui ka '&#rrggbb' kuusnurkseid värvikoode.
+light-level-enabled: "&#26ff00Valgustaseme kuvamine on aktiveeritud."
+
+# See sõnum kuvatakse, kui mängija deaktiveerib edukalt valgustaseme kuvamise.
+# Toetab nii '&' Bukkiti värvikoode kui ka '&#rrggbb' kuusnurkseid värvikoode.
+light-level-disabled: "&cValgustaseme kuvamine on deaktiveeritud."
+
+# See sõnum kuvatakse, kui mängija liigub blokki, kus koletised saavad ilmuda.
+# Asendatakse '%s' tegeliku valgustasemega.
+# Toetab nii '&' Bukkiti värvikoode kui ka '&#rrggbb' kuusnurkseid värvikoode.
+monster-can-spawn-message: "&#c03923Koletised võivad ilmuda sellel valgustasemel %s."
+
+# See sõnum kuvatakse, kui mängija liigub blokki, kus koletised ei saa ilmuda.
+# Asendatakse '%s' tegeliku valgustasemega.
+# Toetab nii '&' Bukkiti värvikoode kui ka '&#rrggbb' kuusnurkseid värvikoode.
+monster-cannot-spawn-message: "&#26ff00Koletised ei saa ilmuda sellel valgustasemel %s."
