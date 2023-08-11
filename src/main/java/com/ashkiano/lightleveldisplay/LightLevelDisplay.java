@@ -59,7 +59,7 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         // Reload the language config file
         reloadLanguageConfig();
 
-        System.out.println("Thank you for using the LightLevelDisplay plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://paypal.me/josefvyskocil");
+        this.getLogger().info("Thank you for using the LightLevelDisplay plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://paypal.me/josefvyskocil");
 
         Metrics metrics = new Metrics(this, 18811);
     }
