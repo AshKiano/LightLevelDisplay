@@ -1,5 +1,5 @@
 name: LightLevelDisplay
-version: '1.14'
+version: '1.15'
 main: com.ashkiano.lightleveldisplay.LightLevelDisplay
 api-version: '1.16'
 authors: [AshKiano]
