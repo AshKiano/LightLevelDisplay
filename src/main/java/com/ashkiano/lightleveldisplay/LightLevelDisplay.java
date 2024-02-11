@@ -14,14 +14,14 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.json.JSONObject;
 
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import java.io.File;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 //TODO upravit tak, aby si každý hráč mohl vybrat jestli chce to do chatu nebo bossbaru
@@ -62,6 +62,8 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
         this.getLogger().info("Thank you for using the LightLevelDisplay plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://donate.ashkiano.com");
 
         Metrics metrics = new Metrics(this, 18811);
+
+        checkForUpdates();
     }
 
     @Override
@@ -198,6 +200,46 @@ public class LightLevelDisplay extends JavaPlugin implements CommandExecutor, Li
             Reader reader = new InputStreamReader(defConfigStream);
             YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(reader);
             languageConfig.setDefaults(defConfig);
+        }
+    }
+
+    private void checkForUpdates() {
+        try {
+            String pluginName = this.getDescription().getName();
+            URL url = new URL("https://www.ashkiano.com/version_check.php?plugin=" + pluginName);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+
+            int responseCode = con.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+
+                String jsonResponse = response.toString();
+                JSONObject jsonObject = new JSONObject(jsonResponse);
+                if (jsonObject.has("error")) {
+                    this.getLogger().warning("Error when checking for updates: " + jsonObject.getString("error"));
+                } else {
+                    String latestVersion = jsonObject.getString("latest_version");
+
+                    String currentVersion = this.getDescription().getVersion();
+                    if (currentVersion.equals(latestVersion)) {
+                        this.getLogger().info("This plugin is up to date!");
+                    } else {
+                        this.getLogger().warning("There is a newer version (" + latestVersion + ") available! Please update!");
+                    }
+                }
+            } else {
+                this.getLogger().warning("Failed to check for updates. Response code: " + responseCode);
+            }
+        } catch (Exception e) {
+            this.getLogger().warning("Failed to check for updates. Error: " + e.getMessage());
         }
     }
 }
